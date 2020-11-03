@@ -1,0 +1,20 @@
+<header>
+  <nav class ="navbar navbar-expand-md navbar-dark bg-dark">
+  <!--<div><a href="https://www.redriver.com" class="navbar-brand">vnp</a></div>-->
+  <img src="assets/images/RedRiver_logo.png" width="150px" height="55px">   
+  
+  <ul class="navbar-nav">
+    <li><a  routerLink="/" class="nav-link">View Students</a></li>
+    <li><a  [routerLink]="['/addstudent']" class="nav-link">Add New Student</a></li>
+    <li><a  [routerLink]="['/deletestudent']" class="nav-link">Delete Student</a></li>
+  
+  </ul>
+  
+  <!-- <ul class="navbar-nav navbar-collapse justify-content-end">
+      <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="navbar-link">Login</a></li>
+      <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="navbar-link">LogOut</a></li>
+    
+    </ul> -->
+    </nav>
+  
+  </header>

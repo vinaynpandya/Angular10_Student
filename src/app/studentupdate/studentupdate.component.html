@@ -1,0 +1,67 @@
+<p-table [value]="students" dataKey="id" editMode="row">
+  <ng-template pTemplate="header">
+      <tr>
+        <th>Student Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Major</th>
+        <th>College</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-rowData let-editing="editing" let-ri="rowIndex">
+      <tr [pEditableRow]="rowData">
+          <td>                
+                      {{rowData.id}}
+                 
+          </td>
+          <td>
+              <p-cellEditor>
+                  <ng-template pTemplate="input">
+                      <input pInputText type="text" [(ngModel)]="rowData.fname">
+                  </ng-template>
+                  <ng-template pTemplate="output">
+                      {{rowData.fname}}
+                  </ng-template>
+              </p-cellEditor>
+          </td>
+          <td>
+              <p-cellEditor>
+                  <ng-template pTemplate="input">
+                      <input pInputText type="text" [(ngModel)]="rowData.lname">
+                  </ng-template>
+                  <ng-template pTemplate="output">
+                      {{rowData.lname}}
+                  </ng-template>
+              </p-cellEditor>
+          </td>
+          <td>
+            <p-cellEditor>
+                <ng-template pTemplate="input">
+                    <input pInputText type="text" [(ngModel)]="rowData.major">
+                </ng-template>
+                <ng-template pTemplate="output">
+                    {{rowData.major}}
+                </ng-template>
+            </p-cellEditor>
+        </td>
+        <td>
+          <p-cellEditor>
+              <ng-template pTemplate="input">
+                  <input pInputText type="text" [(ngModel)]="rowData.college">
+              </ng-template>
+              <ng-template pTemplate="output">
+                  {{rowData.college}}
+              </ng-template>
+          </p-cellEditor>
+      </td>
+          <td style="text-align:center">
+              <button *ngIf="!editing" pButton type="button" pInitEditableRow icon="pi pi-pencil"
+                  class="ui-button-info" (click)="onRowEditInit(rowData)"></button>
+              <button *ngIf="editing" pButton type="button" pSaveEditableRow icon="pi pi-check"
+                  class="ui-button-success" style="margin-right: .5em" (click)="onRowEditSave(rowData)"></button>
+              <button *ngIf="editing" pButton type="button" pCancelEditableRow icon="pi pi-times"
+                  class="ui-button-danger" (click)="onRowEditCancel(rowData, ri)"></button>
+          </td>
+      </tr>
+  </ng-template>
+</p-table>

@@ -1,0 +1,25 @@
+<div class="col-md-6">
+  <div class="form-group col-md-6">
+    <input type="text" class="form-control"  placeholder="Search Word" [(ngModel)]="searchword">
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Student Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Major</th>
+        <th>College</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of students | filter:searchword">
+        <td>{{student.id}}</td>
+        <td>{{student.fname}}</td>
+        <td>{{student.lname}}</td>
+        <td>{{student.major}}</td>
+        <td>{{student.college}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

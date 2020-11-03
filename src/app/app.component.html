@@ -1,0 +1,65 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<app-header></app-header>
+<div class="d-flex" id="wrapper">
+  <!-- Sidebar -->
+  <div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="sidebar-heading">Students </div>
+    <div class="list-group list-group-flush">
+      <a [routerLink]="['/']" class="list-group-item list-group-item-action bg-light">View </a>
+      <a [routerLink]="['/addstudent']" class="list-group-item list-group-item-action bg-light">New</a>
+      <a [routerLink]="['/updatestudent']" class="list-group-item list-group-item-action bg-light">Update</a>
+      <a [routerLink]="['/deletestudent']" class="list-group-item list-group-item-action bg-light">Delete</a>
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+      <button class="btn btn-primary" color="gray" id="menu-toggle">Toggle Menu</button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link" [routerLink]="['/']">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Students
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" [routerLink]="['/addstudent']">New Student</a>
+              <a class="dropdown-item" [routerLink]="['/updatestudent']">Update Student</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" [routerLink]="['/deletestudent']">Delete Student</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!--<div class="container-fluid">
+        <h1 class="mt-4">Solve the Problem</h1>
+        <p><code>Write a web application to:</code>
+
+            Display a list of students with the ability to search by last name and/or first name.
+            Edit a Student
+            View Student Information
+            Left Menu</p>
+        <p><code>Suggested Development Environment:</code>
+
+            Java
+            Spring Boot
+            UI – Spring MVC, Bootstrap
+            Relational Database (MySQL).
+            NTier – UI Interacts (frontend application) with Rest (Backend application).</p>
+      </div>-->
+    <router-outlet></router-outlet>
+  </div>
+  <!-- /#page-content-wrapper -->
+</div>
+<!-- <app-footer></app-footer> -->
+>

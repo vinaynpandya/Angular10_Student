@@ -1,0 +1,26 @@
+<div class="col-md-6">
+  <h2 class="text-center">Add Student</h2>
+<form>
+  <div class="form-group">
+    <label for="fname">First Name:</label>
+    <input type="name" [(ngModel)]="user.fname" placeholder="First name" name="fname" class="form-control" id="fname">
+  </div>
+
+  <div class="form-group">
+    <label for="lname">Last Name:</label>
+    <input type="name" [(ngModel)]="user.lname" placeholder="Last Name" name="lname" class="form-control" id="lname">
+  </div>
+
+  <div class="form-group">
+    <label for="major">Major:</label>
+    <input [(ngModel)]="user.major" placeholder="Major" name="major" class="form-control" id="major">
+  </div>
+
+  <div class="form-group">
+    <label for="college">College</label>
+    <input [(ngModel)]="user.college" placeholder="College" name="College" class="form-control" id="college">
+  </div>
+
+  <button class="btn btn-success" (click)="createStudent()">Create</button>
+</form>
+</div>
